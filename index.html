@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LDMアースジャーニー — 月額メンバーシップ</title>
+<meta name="description" content="20年・15,000名と歩んできたLDMが、最先端を走り続ける月額コミュニティとして開きます。堀内恭隆と仲間たちと、新しい地球の旅へ。" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { background: #0f0a2e; margin: 0; padding: 0; }
+  /* 本番LP用ラッパー: モバイルはそのまま、PCは中央寄せ */
+  .lp-wrap { width: 100%; }
+  /* JS側でmatchMediaにより片方だけrenderするので、displayは不要 */
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#0f0a2e">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="g1" cx="50%" cy="55%" r="60%">
+        <stop offset="0%" stop-color="#3a2a78"/>
+        <stop offset="60%" stop-color="#1a1140"/>
+        <stop offset="100%" stop-color="#0f0a2e"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="800" fill="url(#g1)"/>
+    <circle cx="600" cy="440" r="140" fill="#4a8db8" opacity="0.85"/>
+    <circle cx="600" cy="440" r="140" fill="none" stroke="#fff" stroke-width="2" opacity="0.4"/>
+    <g fill="#fff" opacity="0.85">
+      <circle cx="280" cy="200" r="2"/>
+      <circle cx="950" cy="180" r="2.5"/>
+      <circle cx="180" cy="380" r="1.5"/>
+      <circle cx="1020" cy="430" r="2"/>
+      <circle cx="380" cy="160" r="1.8"/>
+      <circle cx="820" cy="280" r="1.5"/>
+      <circle cx="240" cy="540" r="2"/>
+      <circle cx="970" cy="600" r="2"/>
+    </g>
+    <text x="600" y="700" text-anchor="middle" fill="#f0c97a" font-family="serif" font-size="44" font-style="italic">Earth Journey ✦</text>
+  </svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data.js"></script>
+<script type="text/babel" src="VarE.jsx"></script>
+<script type="text/babel" src="VarE_PC.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+// 外部 text/babel src は非同期で fetch されるので、
+// window.VarE / VarE_PC が揃うまで待ってから render する
+function App() {
+  const [isPC, setIsPC] = React.useState(window.matchMedia('(min-width: 900px)').matches);
+  React.useEffect(() => {
+    const mq = window.matchMedia('(min-width: 900px)');
+    const handler = (e) => setIsPC(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  const Cmp = isPC ? window.VarE_PC : window.VarE;
+  if (!Cmp) return null;
+  return <div className="lp-wrap">{React.createElement(Cmp)}</div>;
+}
+
+function bootstrap() {
+  if (!window.VarE || !window.VarE_PC) {
+    return setTimeout(bootstrap, 50);
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+}
+bootstrap();
+</script>
+
+<script>
+// ===== Scroll fade-in observer (auto-applies to .anim-fade-up elements) =====
+(function(){
+  function setup(){
+    const targets = document.querySelectorAll('.anim-fade-up:not(.in-view)');
+    if (!targets.length) return;
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
+    targets.forEach(t => io.observe(t));
+  }
+  // Re-run on each animation frame for a while to catch React-rendered nodes
+  let tries = 0;
+  const tick = () => {
+    setup();
+    tries++;
+    if (tries < 40) setTimeout(tick, 150);
+  };
+  tick();
+})();
+</script>
+</body>
+</html>

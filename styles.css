@@ -1,0 +1,163 @@
+/* ============================================
+   LDM Earth Journey - Shared Design System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Klee+One:wght@400;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Caveat:wght@400;700&display=swap');
+
+:root {
+  /* Cosmic / Earth palette - inspired by hero watercolor */
+  --cosmic-deep: #1a1340;
+  --cosmic-purple: #5b3d8a;
+  --cosmic-violet: #8c5fb8;
+  --cosmic-blue: #3a6dc4;
+  --sky-cyan: #6fb8d9;
+  --sky-soft: #b9dce8;
+  --sun-gold: #f4cc6a;
+  --sun-warm: #f5a847;
+  --earth-leaf: #88b56a;
+  --earth-deep: #4a6b3e;
+  --earth-cream: #f5efe1;
+  --earth-sand: #e8d9b5;
+  --earth-clay: #c47d52;
+  --pure-white: #ffffff;
+  --ink: #2a2238;
+  --ink-soft: #5a5168;
+
+  /* Type stacks */
+  --serif-jp: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+  --sans-jp: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  --hand-jp: 'Klee One', 'Yu Mincho', serif;
+  --serif-en: 'Cormorant Garamond', serif;
+  --hand-en: 'Caveat', cursive;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans-jp);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* === Mobile / PC switch === */
+#lp-mobile { display: none; }
+#lp-pc { display: block; }
+@media (max-width: 900px) {
+  #lp-mobile { display: block; }
+  #lp-pc { display: none; }
+}
+
+/* Utility: device frame for the canvas */
+.lp-frame {
+  position: relative;
+  width: 420px;
+  height: 880px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.25);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+.lp-frame::-webkit-scrollbar { width: 6px; }
+.lp-frame::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
+
+.lp-frame-pc {
+  width: 1100px;
+  height: 880px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.25);
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* 1. 星のキラキラ点滅 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+.anim-twinkle { animation: twinkle 3s ease-in-out infinite; }
+
+/* 2. 水彩バックグラウンドの浮遊 */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(15px, -20px) scale(1.05); }
+  66% { transform: translate(-10px, 12px) scale(0.97); }
+}
+.anim-float-slow { animation: float-slow 14s ease-in-out infinite; }
+
+@keyframes float-slow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-18px, 20px) scale(1.06); }
+}
+.anim-float-slow-2 { animation: float-slow-2 18s ease-in-out infinite; }
+
+/* 3. スクロールフェードイン */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.anim-fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. カードホバー浮き上がり */
+.anim-card-hover {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+.anim-card-hover:hover {
+  transform: translateY(-6px) rotate(0deg) !important;
+}
+
+/* 5. ポラロイドぴょこんホバー */
+.anim-polaroid {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.anim-polaroid:hover {
+  transform: translateY(-10px) rotate(0deg) scale(1.04) !important;
+  z-index: 10;
+}
+
+/* 6. CTAボタンのオーラ脈打ち */
+@keyframes pulse-aura {
+  0%, 100% { box-shadow: 0 0 30px rgba(124, 197, 124, 0.55), 0 8px 24px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 0 60px rgba(124, 197, 124, 0.85), 0 0 100px rgba(124, 197, 124, 0.35), 0 8px 24px rgba(0,0,0,0.3); }
+}
+.anim-cta-pulse { animation: pulse-aura 2.4s ease-in-out infinite; }
+
+/* 7. ふわふわボタン */
+@keyframes gentle-bob {
+  0%, 100% { transform: rotate(-1deg) translateY(0); }
+  50% { transform: rotate(-1deg) translateY(-4px); }
+}
+.anim-bob { animation: gentle-bob 3.2s ease-in-out infinite; }
+
+/* 8. ホバー時の傾き戻し（カードに装飾的に） */
+.anim-tilt-hover {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+.anim-tilt-hover:hover {
+  transform: translateY(-4px) rotate(0deg) !important;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .anim-twinkle, .anim-float-slow, .anim-float-slow-2, .anim-cta-pulse, .anim-bob {
+    animation: none !important;
+  }
+  .anim-fade-up { opacity: 1; transform: none; }
+}
