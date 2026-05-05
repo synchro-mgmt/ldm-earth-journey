@@ -54,7 +54,7 @@ const VarE_PC = (() => {
   // HERO — 横長フルブリード
   const Hero = () => (
     <div style={{position:'relative', width:'100%', minHeight:780, overflow:'hidden', background:c.bg}}>
-      <img src="assets/hero-watercolor.png" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', filter:'brightness(0.58) saturate(1.05)'}}/>
+      <img src="assets/hero-watercolor.jpg" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', filter:'brightness(0.58) saturate(1.05)'}}/>
       <div style={{position:'absolute', inset:0, background:'rgba(15,10,46,0.32)'}}/>
       <div style={{position:'absolute', inset:0, background:'linear-gradient(180deg, rgba(15,10,46,0.5) 0%, rgba(15,10,46,0.05) 30%, rgba(15,10,46,0.3) 70%, rgba(15,10,46,0.95) 100%)'}}/>
       <Stars n={20}/>
@@ -162,7 +162,7 @@ const VarE_PC = (() => {
           <div style={{position:'absolute', top:-14, left:'50%', transform:'translateX(-50%) rotate(2deg)', width:120, height:24, background:`${c.sun}cc`, opacity:0.85, zIndex:3, boxShadow:'0 2px 8px rgba(0,0,0,0.2)'}} />
           <div style={{background:'white', padding:'14px 14px 50px', boxShadow:'0 30px 70px -15px rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.25)', borderRadius:3}}>
             <div style={{position:'relative', width:'100%', aspectRatio:'1489/931', overflow:'hidden', background:'#0a0e1a'}}>
-              <img src="assets/seminar-scene.png" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
+              <img src="assets/seminar-scene.jpg" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
               {/* Zoomラベルをマスク(左上) */}
               <div style={{position:'absolute', top:'5%', left:'5.5%', width:'30%', height:'15%', background:`linear-gradient(135deg, ${c.pink}, ${c.accent})`, borderRadius:8, display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 4px 12px rgba(0,0,0,0.3)'}}>
                 <div style={{fontFamily:'var(--hand-en)', fontSize:16, color:'white', textAlign:'center', lineHeight:1.2}}>LDM<br/>SESSION</div>
@@ -184,7 +184,7 @@ const VarE_PC = (() => {
     <section id="about" style={{padding:'100px 80px', background:c.cream, color:c.ink, position:'relative', overflow:'hidden'}}>
       <div style={{position:'absolute', top:-80, right:-80, width:300, height:300, borderRadius:'50%', background:`radial-gradient(circle, ${c.sun}25 0%, transparent 70%)`}}/>
       {/* 背景に薄い水彩テクスチャ — FVのキーアートを連続させる */}
-      <img src="assets/hero-watercolor.png" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'cover', opacity:0.06, mixBlendMode:'multiply', pointerEvents:'none'}} alt=""/>
+      <img src="assets/hero-watercolor.jpg" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', objectFit:'cover', opacity:0.06, mixBlendMode:'multiply', pointerEvents:'none'}} alt=""/>
       <div style={{maxWidth:1100, margin:'0 auto', display:'grid', gridTemplateColumns:'1fr 1.4fr', gap:60, alignItems:'center', position:'relative'}}>
         <div>
           <div style={{fontFamily:'var(--hand-en)', fontSize:32, color:c.pink}}>about us</div>
@@ -194,7 +194,7 @@ const VarE_PC = (() => {
           {/* 小ポートレート + 手書きラベル */}
           <div style={{marginTop:36, display:'flex', alignItems:'center', gap:18}}>
             <div style={{position:'relative', width:78, height:78, borderRadius:'50%', overflow:'hidden', border:`2px solid ${c.sun}`, boxShadow:`0 4px 18px ${c.sun}40`, flexShrink:0}}>
-              <img src="assets/horiuchi-portrait.png" style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top'}} alt="堀内恭隆"/>
+              <img src="assets/horiuchi-portrait.jpg" style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top'}} alt="堀内恭隆"/>
             </div>
             <div>
               <div style={{fontFamily:'var(--hand-en)', fontSize:22, color:c.pink, lineHeight:1, transform:'rotate(-2deg)'}}>since 2000 ✦</div>
@@ -235,7 +235,7 @@ const VarE_PC = (() => {
       <div style={{maxWidth:1100, margin:'0 auto', display:'grid', gridTemplateColumns:'auto 1fr', gap:70, alignItems:'center', position:'relative'}}>
         <div style={{position:'relative'}}>
           <div style={{width:280, height:280, borderRadius:'50%', overflow:'hidden', background:c.cream, border:`4px solid ${c.accent}`, boxShadow:`0 0 60px ${c.accent}50`}}>
-            <img src="assets/horiuchi-portrait.png" style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top'}}/>
+            <img src="assets/horiuchi-portrait.jpg" style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top'}}/>
           </div>
           <div style={{position:'absolute', top:-10, right:-20, fontFamily:'var(--hand-en)', color:c.pink, fontSize:24, transform:'rotate(15deg)'}}>✦ guide</div>
           <div style={{position:'absolute', bottom:0, left:-30, fontFamily:'var(--hand-en)', color:c.cyan, fontSize:18, transform:'rotate(-8deg)'}}>since 2000</div>
@@ -445,7 +445,7 @@ const VarE_PC = (() => {
   // EARTH BAND
   const EarthBand = () => (
     <section style={{position:'relative', height:380, overflow:'hidden'}}>
-      <img src="assets/hero-watercolor.png" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 40%'}}/>
+      <img src="assets/hero-watercolor.jpg" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 40%'}}/>
       <div style={{position:'absolute', inset:0, background:'linear-gradient(180deg, rgba(15,10,46,0.55) 0%, rgba(15,10,46,0.15) 50%, rgba(15,10,46,0.85) 100%)'}}/>
       <div style={{position:'absolute', inset:0, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', color:'white', textAlign:'center', padding:'0 40px'}}>
         <div style={{fontFamily:'var(--hand-en)', fontSize:30, color:c.accent, transform:'rotate(-2deg)'}}>welcome to</div>

@@ -137,7 +137,7 @@ window.LDM_DATA = {
     // img: 後で各セミナーの表紙画像 or キービジュアルに差し替え可能。空のままならティール系プレースホルダ表示。
     list: [
       {
-        num: "01", title: "4次元・5次元でパラレルワールドを乗り換える「異常な現実創造」", tag: "#パラレル", sym: "⦿", img: "assets/seminar-01-parallel.png",
+        num: "01", title: "4次元・5次元でパラレルワールドを乗り換える「異常な現実創造」", tag: "#パラレル", sym: "⦿", img: "assets/seminar-01-parallel.jpg",
         core: [
           "「5次元切り替え→4次元把握→3次元で実践」という具体的フレームワーク",
           "5次元意識では「目標設定して考える」のではなく、現実が向こうから迫ってくる",
@@ -149,7 +149,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "02", title: "過去世はただの「データ」だった!? カルマを瞬時に手放し、5次元のパラレルワールドへ移行する方法", tag: "#カルマ解放", sym: "♾", img: "assets/seminar-02-karma.png",
+        num: "02", title: "過去世はただの「データ」だった!? カルマを瞬時に手放し、5次元のパラレルワールドへ移行する方法", tag: "#カルマ解放", sym: "♾", img: "assets/seminar-02-karma.jpg",
         core: [
           "3次元では捉えられない過去生も、4次元でアクセス可能、5次元ではパラレルごと切り替わる",
           "地球全体の次元上昇により集合的無意識の浄化が進み、カルマ解消が以前より遥かに容易に",
@@ -161,7 +161,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "03", title: "あなたのお金が消える本当の理由〜「マイナスの富」を見極め、1円単位から運命を変える収支の魔法〜", tag: "#富", sym: "◈", img: "assets/seminar-03-wealth.png",
+        num: "03", title: "あなたのお金が消える本当の理由〜「マイナスの富」を見極め、1円単位から運命を変える収支の魔法〜", tag: "#富", sym: "◈", img: "assets/seminar-03-wealth.jpg",
         core: [
           "物質次元の富(現金)・心次元の富(信用・関係性)・魂次元の富(徳)の3層構造",
           "お金の使い道を10段階で評価し「マイナスの富」を識別する実践ワーク",
@@ -173,7 +173,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "04", title: "自分の中の「女性性」と「男性性」を統合し、圧倒的な富を生み出すシンクロパートナーの魔法", tag: "#統合", sym: "⚫", img: "assets/seminar-04-integration.png",
+        num: "04", title: "自分の中の「女性性」と「男性性」を統合し、圧倒的な富を生み出すシンクロパートナーの魔法", tag: "#統合", sym: "⚫", img: "assets/seminar-04-integration.jpg",
         core: [
           "男性性の役割は「軸となる・動かない」、女性性は「内側から広がる・受け取る」",
           "既存の関係の箱(夫婦・上司部下)を外し、独自の関係を自分たちでデザインする",
@@ -185,14 +185,14 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "05", title: "【公外非公開】表では絶対に話せない「女性性と男性性の統合」のリアルと裏側", tag: "#統合", sym: "◆", img: "assets/seminar-05-shadow.png",
+        num: "05", title: "【公外非公開】表では絶対に話せない「女性性と男性性の統合」のリアルと裏側", tag: "#統合", sym: "◆", img: "assets/seminar-05-shadow.jpg",
         quotes: [
           "外側の男性を使って、自分が女であることを確認する時代が終わっている。",
           "パートナーシップは絶対必要じゃなくなる——プラスアルファのおまけになる。"
         ]
       },
       {
-        num: "06", title: "意識の覚醒は「体」から始まる。女性性の時代を生き抜くための「肉体との対話術」", tag: "#覚醒", sym: "✿", img: "assets/seminar-06-awakening.png",
+        num: "06", title: "意識の覚醒は「体」から始まる。女性性の時代を生き抜くための「肉体との対話術」", tag: "#覚醒", sym: "✿", img: "assets/seminar-06-awakening.jpg",
         core: [
           "男性性の時代(肩書き・収入で繋がる)から女性性の時代(感覚・波長で繋がる)への移行",
           "意識が高次元に行きすぎて肉体から切り離されるリスクへの警鐘",
@@ -204,7 +204,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "07", title: "「目標達成」が苦しいあなたへ。未来を手放し「今」を生きる、女性性時代のミッションの正体", tag: "#ミッション", sym: "✴", img: "assets/seminar-07-mission.png",
+        num: "07", title: "「目標達成」が苦しいあなたへ。未来を手放し「今」を生きる、女性性時代のミッションの正体", tag: "#ミッション", sym: "✴", img: "assets/seminar-07-mission.jpg",
         core: [
           "男性性の時代のミッション(目標達成・未来ビジョン)が機能しなくなっている理由",
           "「達成から体験へ」「目的思考から感性思考へ」のパラダイムシフト",
@@ -216,7 +216,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "08", title: "恐れを手放し、大いなる力に「委ねる」〜植物の精霊と繋がる、魂の解放&覚醒ワーク〜", tag: "#ワーク", sym: "⚘", img: "assets/seminar-08-plant.png",
+        num: "08", title: "恐れを手放し、大いなる力に「委ねる」〜植物の精霊と繋がる、魂の解放&覚醒ワーク〜", tag: "#ワーク", sym: "⚘", img: "assets/seminar-08-plant.jpg",
         core: [
           "堀内がインド・バリ・ペルーで得た変容体験のシェア",
           "後半で植物の精霊を呼んだエネルギーワークを実施",
@@ -228,7 +228,7 @@ window.LDM_DATA = {
         ]
       },
       {
-        num: "09", title: "自分の代わりに働く「生命体」を創る。AIエージェント×エネルギーワークの最前線", tag: "#AI×エネルギー", sym: "◉", img: "assets/seminar-09-ai.png",
+        num: "09", title: "自分の代わりに働く「生命体」を創る。AIエージェント×エネルギーワークの最前線", tag: "#AI×エネルギー", sym: "◉", img: "assets/seminar-09-ai.jpg",
         core: [
           "AIエージェント(Claude Code/Cowork)導入後わずか2週間で、3倍以上の仕事量を最も早い時間に完了——しかもエネルギッシュ",
           "AIエージェントカンパニーの設計:ピラミッド型組織ではなく、命を中心にした同心円型の生命体として会社を構築(地球→命→細胞→閃き→表現→会社、チャクラと対応)",
@@ -392,7 +392,7 @@ window.LDM_DATA = {
       {
         name: "LDM ニューアース",
         tagline: "次元上昇した地球の意識構造を学ぶ",
-        sessions: 3, totalHours: 9, color: "leaf", img: "assets/program-newearth.png",
+        sessions: 3, totalHours: 9, color: "leaf", img: "assets/program-newearth.jpg",
         intro: "地球は今、次元上昇のプロセスにある。\nその「次元上昇した地球」で生きるとはどういうことか——意識の構造、宇宙との関係、そしてあなた自身の目覚め。LDMメソッドの全体像を体感しながら理解する、シリーズの基盤となる講座。",
         curriculum: [
           { day: 1, title: "次元上昇する地球と意識の構造", body: "地球がどこへ向かっているのか。意識構造の全体マップ。「なぜ自分はここにいるのか」の根本に触れる。" },
@@ -403,7 +403,7 @@ window.LDM_DATA = {
       {
         name: "LDM ニュープレジャー",
         tagline: "歓びを起点に現実を創造する",
-        sessions: 3, totalHours: 9, color: "pink", img: "assets/program-newpleasure.png",
+        sessions: 3, totalHours: 9, color: "pink", img: "assets/program-newpleasure.jpg",
         intro: "封印された女性性と男性性の解放。\n「歓び」が罪悪感なく自分の中心に座った時、現実創造のOSが根本から書き換わる。内なる男性性と女性性が統合し、踊り出す——その体感を通じて「生きる歓び」の本質に触れる。",
         curriculum: [
           { day: 1, title: "封印された女性性", body: "社会が押し込めた「感じる力」を解放する。歓びへの罪悪感の構造。なぜ人は「楽しんではいけない」と思い込むのか。" },
@@ -414,7 +414,7 @@ window.LDM_DATA = {
       {
         name: "LDM ニューディメンション",
         tagline: "次元を超えた在り方への移行",
-        sessions: 3, totalHours: 9, color: "cyan", img: "assets/program-newdimension.png",
+        sessions: 3, totalHours: 9, color: "cyan", img: "assets/program-newdimension.jpg",
         intro: "Beautiful Spirit — 存在そのものの美しさへの目覚め。\n多次元意識の統合、源(ソース)との一致、そして「何かをする自分」から「在るだけの自分」への移行。LDMシリーズの最深部。",
         curriculum: [
           { day: 1, title: "多次元の自分と出会う", body: "3次元の自分、5次元の自分、それ以上。複数の次元に同時に存在している意識の構造。次元間のポータルを開く。" },
@@ -425,7 +425,7 @@ window.LDM_DATA = {
       {
         name: "シンクロパートナー",
         tagline: "魂のパートナーシップを引き寄せる",
-        sessions: 2, totalHours: 6, color: "accent", img: "assets/program-syncpartner.png",
+        sessions: 2, totalHours: 6, color: "accent", img: "assets/program-syncpartner.jpg",
         intro: "パートナーシップの本質は「相手を見つけること」ではない。\n自分の中の女性性と男性性が統合された時、シンクロニシティとしてパートナーが現れる。魂・心・体の3層でシンクロする関係性。そして、複数のパートナーとそれぞれ異なる「富」を共同創造する。",
         curriculum: [
           { day: 1, title: "自分の中の統合", body: "パートナーを外に求める前に、自分の中の女性性×男性性を統合する。シンクロパートナーが現れる意識の条件。魂・心・体の3層で共鳴する関係とは。" },
@@ -435,7 +435,7 @@ window.LDM_DATA = {
       {
         name: "シンクロマネー",
         tagline: "豊かさのシンクロニシティ実践",
-        sessions: 5, totalHours: 15, color: "sun", img: "assets/program-syncmoney.png",
+        sessions: 5, totalHours: 15, color: "sun", img: "assets/program-syncmoney.jpg",
         intro: "「お金」の概念そのものを解体し、再構築する。\nピラミッド型の経済構造から、循環型エコシステムへ——自分の中にある4つのエレメント(プレイヤー・アレンジャー・オーナー・ダナ)を統合し、「間(Ma)」から富が湧き出る意識構造を体得する。5回の連続講座で最も深く、最も実践的。",
         curriculum: [
           { day: 1, title: "ピラミッドの解体", body: "資本主義の意識構造を理解する。なぜ「頑張っても豊かにならない」のか。ピラミッド型思考から循環型思考へのシフト。" },
