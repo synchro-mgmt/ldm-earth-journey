@@ -251,10 +251,8 @@ h1 span:first-child {
 }
 
 .event-stamp {
-  position: absolute;
+  position: relative;
   z-index: 6;
-  top: 168px;
-  left: 50%;
   display: flex;
   width: 260px;
   height: 108px;
@@ -264,8 +262,10 @@ h1 span:first-child {
   border: 2px solid var(--ink);
   background: var(--acid);
   color: var(--ink);
-  transform: translateX(-50%) rotate(-2deg);
+  margin-bottom: 26px;
+  transform: rotate(-2deg);
   box-shadow: 8px 8px 0 var(--orange);
+  flex: 0 0 auto;
 }
 
 .event-stamp span,
@@ -777,12 +777,14 @@ footer p {
   }
 
   .event-stamp {
+    position: absolute;
     width: 220px;
     height: 96px;
     top: 164px;
     right: 5vw;
     bottom: auto;
     left: auto;
+    margin-bottom: 0;
     transform: rotate(-2deg);
   }
 
